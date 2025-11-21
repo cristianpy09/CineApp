@@ -9,12 +9,12 @@ type Props = {
 
 export default function Card({ name, img, date, description }: Props) {
   return (
-    <article className="relative w-40 h-50 bg-red-500 rounded-xl  ">
-      <h1>{name}</h1>
-      <img src={`https://image.tmdb.org/t/p/w500${img}`}></img>
-      <div className="mt-18">{description}</div>
+    <article className="relative w-53 h-90 bg-red-500 rounded-xl overflow-hidden ">
+      <h1 className="text-center">{name}</h1>
+      <img className="h-55 w-full p-1 "  src={`https://image.tmdb.org/t/p/w400${img}`}></img>
+      <div className="mt-0 p-1 ">{description}</div>
 
-      <button className="absolute bottom-2 right-2 bg-amber-300 rounded-xl p-1 text-black cursor-pointer hover:bg-amber-200    ">
+      <button className="absolute bottom-2 right-2 bg-amber-300 rounded-xl p-1 text-black cursor-pointer hover:bg-amber-200  ">
         ver mas
       </button>
     </article>
