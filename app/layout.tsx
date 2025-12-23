@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import Aside from "./components/Aside";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +20,7 @@ export default function RootLayout({
         <Header />
 
         <div className="flex flex-1">
-          <Aside />
+         
 
           <main className="flex-1 p-4">{children}</main>
         </div>

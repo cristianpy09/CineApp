@@ -2,16 +2,22 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <nav className='flex justify-center h-15 bg-blue-400  '>
+    <nav className='flex justify-center h-15 bg-black  '>
         <ul className='flex space-x-5'>
             <li>
-                home
+                Inicio
             </li>
             <li>
-                home
+                Peliculas
             </li>
             <li>
-                home
+                Series
+            </li>
+            <li>
+                Anime
+            </li>
+            <li>
+               <input placeholder='Buscar' type="text" name="" id="" />
             </li>
         </ul>
     </nav>

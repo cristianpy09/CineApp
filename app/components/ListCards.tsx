@@ -21,7 +21,7 @@ export default async function ListCards() {
 
     <div className="grid grid-cols-5 p-15 gap-4 " >
         {data.results.map((movie:Movie)=>(
-            <Card key={movie.id} name={movie.original_title} date={movie.release_date} description={movie.overview} img={movie.poster_path} />
+            <Card key={movie.id} id={movie.id} name={movie.original_title} date={movie.release_date} description={movie.overview} img={movie.poster_path} />
         ))}
         
     </div>
