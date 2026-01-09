@@ -5,22 +5,20 @@ type Props = {
   date: string;
   img: string | null;
   description: string;
-  id:number
+  id: number;
 };
 
-export default function Card({ name, img, date, description ,id}: Props) {
+export default function Card({ name, img, date, description, id }: Props) {
   return (
     <div>
       <Link href={`/${id}`}>
-      <article className="relative w-50 h-70 bg-red-500 rounded-xl overflow-hidden cursor-pointer  hover:brightness-50 ">
-        <img
-          className="h-full w-full  "
-          src={`https://image.tmdb.org/t/p/w400${img}`}
+        <article className="relative w-50 h-70 bg-red-500 rounded-xl overflow-hidden cursor-pointer  hover:brightness-50 ">
+          <img
+            className="h-full w-full  "
+            src={`https://image.tmdb.org/t/p/w400${img}`}
           ></img>
-
-       
-      </article>
-          </Link>
+        </article>
+      </Link>
       <h1>{name}</h1>
     </div>
   );

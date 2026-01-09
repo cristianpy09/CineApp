@@ -1,7 +1,9 @@
+import CardDetail from "@/app/components/CardDetail";
+import { Movie } from "@/app/interfaces/movies";
 import { Params } from "next/dist/server/request/params";
 import React from "react";
 const URL =
-  "https://api.themoviedb.org/3/movie/now_playing?language=es-ES&page=1";
+  "https://api.themoviedb.org/3/movie"
 
 interface PageProps {
   params: {
@@ -24,5 +26,9 @@ export default async function page({ params }: PageProps) {
   const data = await response.json()
   console.log(data)
   
-  return <div>pagina de detalles con id:{id}</div>;
+  return (
+  <div className="p-15  flex"  >
+    <CardDetail key={data.id} name={data.original_title} date={data.release_date} description={data.overview} img={data.poster_path} />
+    <h3 className="p-10 w-100" >{data.overview}</h3>
+  </div>)
 }
