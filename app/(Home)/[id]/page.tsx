@@ -4,11 +4,11 @@ import React from 'react'
 
 interface PageProps {
     params: {
-      id: number; // El nombre 'id' debe coincidir con el nombre de tu carpeta dinámica: [id]
+      id: number; 
     };
   }
-export default function page({id}:PageProps) {
-
+export default async function page({params}:PageProps) {
+  const {id} = await params;
   return (
     <div>pagina de detalles con id:{id}</div>
   )
